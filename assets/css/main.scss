@@ -615,6 +615,7 @@ $menu-height: 70px;
 
 	.icon {
 		float: left;
+		margin-bottom: 60px;
 	}
 
 	h4 {
@@ -630,6 +631,10 @@ $menu-height: 70px;
 
 	p, span, h4, a {
 		color: #20222b;
+	}
+
+	br {
+		display: none;
 	}
 }
 
@@ -781,6 +786,10 @@ $menu-height: 70px;
 			@include omega;
 			height: auto;
 			margin-bottom: 10px;
+		}
+
+		.icon {
+			margin-bottom: 0;
 		}
 	}
 

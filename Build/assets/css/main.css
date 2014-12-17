@@ -1003,7 +1003,8 @@ p {
     .social .row:after {
       clear: both; }
   .social .icon {
-    float: left; }
+    float: left;
+    margin-bottom: 60px; }
   .social h4 {
     font-size: 15pt;
     margin: 0; }
@@ -1013,6 +1014,8 @@ p {
     margin-top: 5px; }
   .social p, .social span, .social h4, .social a {
     color: #20222b; }
+  .social br {
+    display: none; }
 
 .footer-container {
   background: #20222b;
@@ -1125,6 +1128,8 @@ p {
     margin-bottom: 10px; }
     .social .wide:last-child, .social .narrow:last-child {
       margin-right: 0; }
+  .social .icon {
+    margin-bottom: 0; }
 
   .footer-container {
     padding: 60px 0; }
