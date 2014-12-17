@@ -469,16 +469,17 @@ a {
     text-decoration: underline; }
 
 body, p, a, span {
-  color: #20222b; }
+  color: #20222b;
+  font-weight: 300; }
 
-p, a, span {
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+p, a, span, li, a {
+  font-family: Helvetica, sans-serif; }
 
 h1, h2 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: Helvetica, sans-serif; }
 
 h3 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: Helvetica, sans-serif; }
 
 img {
   max-width: 100% !important;
@@ -682,6 +683,21 @@ p {
     .header .stats .label {
       font-size: 14pt;
       font-weight: 200; }
+
+.content h2 {
+  font-size: 18pt;
+  line-height: 24pt; }
+.content h3 {
+  font-size: 16pt;
+  line-height: 22pt;
+  font-weight: bold;
+  text-align: center; }
+.content p, .content li {
+  font-size: 13pt;
+  line-height: 18pt; }
+  .content p a, .content li a {
+    color: #3c8db2;
+    font-weight: bold; }
 
 .details {
   margin-top: 60px; }
