@@ -43,6 +43,54 @@ animateFeatures = ->
 				$obj.transition {scale: 1.2}, 400
 				$obj.transition {scale: 1.0}, 200
 
+userAgent = navigator.userAgent
+isiPhone = userAgent.match(/iPhone/i) != null ? true : false
+isiPad = userAgent.match(/iPad/i) != null ? true : false
+isSafari = userAgent.match(/Safari/i) != null ? true : false
+isiOS = isiPhone || isiPad
+
+desktopPlayer = '<iframe id="headervid" src="//player.vimeo.com/video/113872517?api=1&amp;player_id=headervid&amp;title=0&amp;byline=0&amp;portrait=0" width="1102" height="620" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+iPhonePlayer = '<video id="headervid" src="http://assets.robocatapps.com/bemyeyes/bemyeyes-mobile.mov" controls="controls" webkitAllowFullScreen mozallowfullscreen allowFullScreen autoplay preload></video>'
+
+preparePlayer = ->
+	player = desktopPlayer
+	player = iPhonePlayer if isiOS
+
+	$('.video-wrapper').html player
+
+hidePlayer = ->
+	$(".video-curtain").fadeOut()
+	$(".video-wrapper").fadeOut()
+
+showPlayer = ->
+	$(".video-curtain").fadeIn()
+	$(".video-wrapper").fadeIn()
+
+startVideo = ->
+	showPlayer()
+	if !isiOS
+		Froogaloop($("#headervid")[0]).addEvent 'ready', vimeoReady
+	else
+		ele = document.getElementById("headervid")
+		ele.addEventListener 'pause', vimeoPaused
+		ele.addEventListener 'ended', vimeoPaused
+		ele.play()
+
+vimeoReady = (pid) ->
+	if !isiOS
+		fp = Froogaloop(pid)
+		fp.addEvent 'pause', vimeoPaused
+		fp.addEvent 'finish', vimeoFinished
+		fp.api 'play'
+
+vimeoPaused = (pid) ->
+	delay 100, ->
+		hidePlayer()
+
+vimeoFinished = (pid) ->
+	delay 2000, ->
+		hidePlayer()
+
 $(window).scroll ->
 	$this = $(this)
 	$header = $(".menu-container")
@@ -55,3 +103,7 @@ $(window).scroll ->
 
 $(document).ready ->
 	getStats()
+	preparePlayer()
+
+	$(".header").click (e) ->
+		startVideo()

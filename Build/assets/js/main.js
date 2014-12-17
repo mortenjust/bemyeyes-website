@@ -1,5 +1,5 @@
 (function() {
-  var animateFeatures, applyStats, countTotStat, delay, getStats;
+  var animateFeatures, applyStats, countTotStat, delay, desktopPlayer, getStats, hidePlayer, iPhonePlayer, isSafari, isiOS, isiPad, isiPhone, preparePlayer, showPlayer, startVideo, userAgent, vimeoFinished, vimeoPaused, vimeoReady, _ref, _ref1, _ref2;
 
   getStats = function() {
     var url, xhr;
@@ -64,6 +64,80 @@
     });
   };
 
+  userAgent = navigator.userAgent;
+
+  isiPhone = (_ref = userAgent.match(/iPhone/i) !== null) != null ? _ref : {
+    "true": false
+  };
+
+  isiPad = (_ref1 = userAgent.match(/iPad/i) !== null) != null ? _ref1 : {
+    "true": false
+  };
+
+  isSafari = (_ref2 = userAgent.match(/Safari/i) !== null) != null ? _ref2 : {
+    "true": false
+  };
+
+  isiOS = isiPhone || isiPad;
+
+  desktopPlayer = '<iframe id="headervid" src="//player.vimeo.com/video/113872517?api=1&amp;player_id=headervid&amp;title=0&amp;byline=0&amp;portrait=0" width="1102" height="620" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+
+  iPhonePlayer = '<video id="headervid" src="http://assets.robocatapps.com/bemyeyes/bemyeyes-mobile.mov" controls="controls" webkitAllowFullScreen mozallowfullscreen allowFullScreen autoplay preload></video>';
+
+  preparePlayer = function() {
+    var player;
+    player = desktopPlayer;
+    if (isiOS) {
+      player = iPhonePlayer;
+    }
+    return $('.video-wrapper').html(player);
+  };
+
+  hidePlayer = function() {
+    $(".video-curtain").fadeOut();
+    return $(".video-wrapper").fadeOut();
+  };
+
+  showPlayer = function() {
+    $(".video-curtain").fadeIn();
+    return $(".video-wrapper").fadeIn();
+  };
+
+  startVideo = function() {
+    var ele;
+    showPlayer();
+    if (!isiOS) {
+      return Froogaloop($("#headervid")[0]).addEvent('ready', vimeoReady);
+    } else {
+      ele = document.getElementById("headervid");
+      ele.addEventListener('pause', vimeoPaused);
+      ele.addEventListener('ended', vimeoPaused);
+      return ele.play();
+    }
+  };
+
+  vimeoReady = function(pid) {
+    var fp;
+    if (!isiOS) {
+      fp = Froogaloop(pid);
+      fp.addEvent('pause', vimeoPaused);
+      fp.addEvent('finish', vimeoFinished);
+      return fp.api('play');
+    }
+  };
+
+  vimeoPaused = function(pid) {
+    return delay(100, function() {
+      return hidePlayer();
+    });
+  };
+
+  vimeoFinished = function(pid) {
+    return delay(2000, function() {
+      return hidePlayer();
+    });
+  };
+
   $(window).scroll(function() {
     var $header, $this;
     $this = $(this);
@@ -77,7 +151,11 @@
   });
 
   $(document).ready(function() {
-    return getStats();
+    getStats();
+    preparePlayer();
+    return $(".header").click(function(e) {
+      return startVideo();
+    });
   });
 
 }).call(this);
