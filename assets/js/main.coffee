@@ -59,12 +59,14 @@ preparePlayer = ->
 	$('.video-wrapper').html player
 
 hidePlayer = ->
-	$('.menu').show();
+	$('.menu-container').css('opacity', 1)
+	$('.menu').show()
 	$(".video-curtain").fadeOut()
 	$(".video-wrapper").fadeOut()
 
 showPlayer = ->
-	$('.menu').hide();
+	$('.menu-container').css('opacity', 0)
+	$('.menu').hide()
 	$(".video-curtain").fadeIn()
 	$(".video-wrapper").fadeIn()
 
