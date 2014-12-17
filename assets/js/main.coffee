@@ -102,6 +102,9 @@ $(window).scroll ->
 
 	animateFeatures()
 
+$('body').bind 'touchmove', (e) ->
+	animateFeatures()
+
 $(document).ready ->
 	getStats()
 	preparePlayer()

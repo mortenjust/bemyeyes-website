@@ -153,6 +153,10 @@
     return animateFeatures();
   });
 
+  $('body').bind('touchmove', function(e) {
+    return animateFeatures();
+  });
+
   $(document).ready(function() {
     getStats();
     preparePlayer();
