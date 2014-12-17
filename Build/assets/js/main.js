@@ -140,6 +140,9 @@
 
   $(window).scroll(function() {
     var $header, $this;
+    if (isiOS) {
+      return;
+    }
     $this = $(this);
     $header = $(".menu-container");
     if ($this.scrollTop() > 1) {

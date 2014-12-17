@@ -86,6 +86,7 @@ $menu-height: 70px;
 .menu-container {
 	background: transparent;
 	height: $menu-height;
+	position: relative;
 	@include transition(all 0.7s ease-in-out);
 
 	.white { display: none; }
@@ -781,10 +782,8 @@ $menu-height: 70px;
 
 @include media(max-width 700px) {
 	.header-container {
-		// background-image: none;
-		background-color: rgb(169, 170, 165);
-		@include retina-image("high_banner", 700px 1200px);
-		bacground-size: 700px 1200px;
+		background-image: url(high_banner.jpg);
+		background-size: 700px 1200px;
 		background-position: 59% 65%;
 	}
 

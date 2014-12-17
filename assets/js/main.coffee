@@ -92,6 +92,7 @@ vimeoFinished = (pid) ->
 		hidePlayer()
 
 $(window).scroll ->
+	return if isiOS
 	$this = $(this)
 	$header = $(".menu-container")
 	if $this.scrollTop() > 1
