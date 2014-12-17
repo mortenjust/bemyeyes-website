@@ -3,7 +3,7 @@
 
   getStats = function() {
     var url, xhr;
-    url = "http://devapi.bemyeyes.org/stats/community?callback=?";
+    url = "http://api.bemyeyes.org/stats/community?callback=?";
     xhr = $.getJSON(url, function() {
       return console.log("Got api response");
     });

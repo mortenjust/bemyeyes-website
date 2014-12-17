@@ -1,5 +1,5 @@
 getStats = () ->
-	url = "http://devapi.bemyeyes.org/stats/community?callback=?"
+	url = "http://api.bemyeyes.org/stats/community?callback=?"
 	xhr = $.getJSON url, () ->
 		console.log "Got api response"
 
