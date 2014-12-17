@@ -94,11 +94,13 @@
   };
 
   hidePlayer = function() {
+    $('.menu').show();
     $(".video-curtain").fadeOut();
     return $(".video-wrapper").fadeOut();
   };
 
   showPlayer = function() {
+    $('.menu').hide();
     $(".video-curtain").fadeIn();
     return $(".video-wrapper").fadeIn();
   };

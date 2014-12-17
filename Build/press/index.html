@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Be My Eyes ~ Lend Your Eyes to the Blind</title>
+        <meta name="description" content="Be My Eyes is an iPhone app for that lets blind people contact a network of sighted volunteers for help with live video chat.">
+        <meta name="keywords" content="kaomoji,custom,keyboard,ios8,iphone,iPad,universal,app,appstore,text,emoji">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="og:title" content="Be My Eyes ~ Lend Your Eyes to the Blind" />
+        <meta name="og:site_name" content="Be My Eyes" />
+        <meta name="og:url" content="http://bemyeyes.org" />
+        <meta name="og:description" content="Be My Eyes is an iPhone app for that lets blind people contact a network of sighted volunteers for help with live video chat." />
+        <meta name="og:image" content="../assets/images/header-logo.png" />
+        <meta name="og:locale" content="en_US" />
+        <meta name="og:type" content="website" />
+
+        
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+        <link rel='stylesheet' href='../assets/css/main.css'>
+        <!--[if lt IE 9]>
+        <link rel='stylesheet' href='../assets/css/ie8.css'>
+        <![endif]-->
+
+        <link rel="image_src" href="../assets/images/header-logo.png" />
+        <link href="../favicon.ico" rel="shortcut icon">
+        <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+    </head>
+    <body class="not-ios">
+        <div class="container">
+<div class="menu-container cont">
+    <div class="menu int">
+        <div class="aside">
+            <a href="/" title="Homepage" class="logo dark">
+                <img src="../assets/images/header-logo.png">
+            </a>
+            <a href="/" title="Homepage" class="logo white">
+                <img src="../assets/images/header-logo.png" width="77" height="53">
+            </a>
+        </div>
+
+        <div class="bside">
+            <div class="links">
+                <a href="/faq/" title="FAQ">FAQ</a>
+                <a href="/press/" title="Press">Press</a>
+                <a href="https://itunes.apple.com/dk/app/be-my-eyes-helping-blind-see/id905177575?mt=8" title="Download the App">Download the App</a>
+                <div class="clearboth"></div>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="content-container cont">
+	<div class="content int">
+		<h1>Press</h1>
+
+		<center><a href="/bemyeyes_press_package.zip" class="button download">Download the press package</a></center>
+
+		<h2>Contact us</h2>
+		<p>
+			<strong>Hans Jørgen Wiberg (app inventor):</strong><br>
+			tel. (+45) 60 85 86 87<br>
+			<a href="mailto:hans@bemyeyes.org">hans@bemyeyes.org</a>
+		</p>
+		<p>
+			<strong>Thelle Kristensen (co-founder):</strong><br>
+			tel. (+45) 40 60 05 66<br>
+			<a href="mailto:thelle@bemyeyes.org">thelle@bemyeyes.org</a>
+		</p>
+		
+		<h2>About Be My Eyes</h2>
+		<p>First a blind person request assistance in the Be My Eyes app. The challenge that he/she needs help with can be anything from knowing the expiry date on the milk to getting help crossing the street.</p>
+
+		<p>The volunteer helper receives a notification for help and a live video connection is established. From the live video the volunteer can help the blind answering the question the blind needs answered.</p>
+
+		<h3>The team</h3>
+		<div class="team">
+			<div class="asection">
+				<img src="../assets/images/team/team-1.jpg" alt="">
+				<p>Hans Jørgen Wiberg is trained in philosophy and works as a craftsman, but is first and foremostly an idea-starter with a deep interest in society, arts &amp; technology - with focus on access for all no matter their handicap.</p>
+			</div>
+			
+			<div class="bsection">
+				<img src="../assets/images/team/team-2.jpg" alt="">
+				<p>The initial team met at a Startup Weekend event in Aarhus, Denmark and won the prize for the most innovative idea.</p>
+			</div>
+		</div>
+
+
+		<h3>Promo video</h3>
+		<br>
+		<center>
+			<iframe src="//player.vimeo.com/video/113872517" width="800" height="449" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/113872517">
+		</center>
+
+		<h3>Be My Eyes at TEDx Copenhagen</h3>
+		<br>
+		<center>
+			<iframe width="853" height="480" src="//www.youtube.com/embed/IfeLJxCSLC0?rel=0" frameborder="0" allowfullscreen></iframe>
+		</center>
+
+		<h3>Featured in the Press</h3>
+		<br>
+		<ul>
+			<li><a href="http://www.dr.dk/tv/se/penge/penge-49" title="">DR - Pengemagasinet</a></li>
+			<li><a href="http://downloads.bbc.co.uk/podcasts/fivelive/pods/pods_20130430-0305a.mp3" title="">BBC 5</a></li>
+			<li><a href="http://m.b.dk/?article=27760942-Ny-app-forbinder-frivillige-og-blinde" title="">Berlingske</a></li>
+			<li><a href="http://tedxcopenhagen.dk/talk/be-my-eyes/" title="">TEDx Copenhagen</a></li>
+			<li><a href="http://www.tv2east.dk/video/2013-12-29/dagens-regionale-nyheder-1930-29-december-2013" title="">TV 2 Øst</a></li>
+			<li><a href="http://arcticstartup.com/2013/07/11/be-my-eyes-picks-up-e250000-to-assist-blind-over-iphone-app" title="">ArcticStartup</a></li>
+			<li><a href="http://trendsonline.dk/2013/07/10/velux-fonden-stotter-blinde-app/" title="">Trendsonline</a></li>
+		</ul>
+	</div>
+</div>
+
+            <div class="footer-container cont">
+                <div class="footer int">
+                    <div class="asection">
+                        <p>Made with love in<br>Copenhagen by</p>
+                    </div>
+                    <div class="bsection">
+                        <a href="/" title="Be My Eyes">
+                            <img src="../assets/images/bemyeyes.png">
+                        </a>
+                        <img src="../assets/images/and.png" alt="and" class="and">
+                        <a href="http://robo.cat" title="Robocat">
+                            <img src="../assets/images/robocat.png">
+                        </a>
+                        <div class="clearboth"></div>
+                    </div>
+                </div>
+            </div>
+        <script src='../assets/js/jquery.js'></script>
+<script src='../assets/js/retina.js'></script>
+<script src='../assets/js/countUp.js'></script>
+<script src='../assets/js/jquery.transit.js'></script>
+<script src='../assets/js/froogaloop.js'></script>
+<script src='../assets/js/main.js'></script>
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-54862207-1');ga('send','pageview');
+        </script>
+    </body>
+</html>

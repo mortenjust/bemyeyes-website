@@ -279,6 +279,7 @@ $menu-height: 70px;
 		line-height: 22pt;
 		font-weight: bold;
 		text-align: center;
+		margin-top: 40px;
 	}
 
 	p, li {
@@ -288,6 +289,27 @@ $menu-height: 70px;
 		a {
 			color: #3c8db2;
 			font-weight: bold;
+		}
+	}
+
+	.button {
+		background-color: #282828;
+		color: #fff;
+		border-radius: 5px;
+		padding: 22px 32px;
+		font-weight: bold;
+		margin: 10px 0;	
+		display: inline-block;
+	}
+
+	.team {
+		@include row;
+
+		.asection, .bsection {
+			@include span-columns(6 of 12);
+		}
+		.bsection {
+			@include omega;
 		}
 	}
 }
