@@ -1,0 +1,120 @@
+    
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Be My Eyes ~ Lend Your Eyes to the Blind</title>
+        <meta name="description" content="Be My Eyes is an iPhone app for that lets blind people contact a network of sighted volunteers for help with live video chat.">
+        <meta name="keywords" content="kaomoji,custom,keyboard,ios8,iphone,iPad,universal,app,appstore,text,emoji">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="og:title" content="Be My Eyes ~ Lend Your Eyes to the Blind" />
+        <meta name="og:site_name" content="Be My Eyes" />
+        <meta name="og:url" content="http://bemyeyes.org" />
+        <meta name="og:description" content="Be My Eyes is an iPhone app for that lets blind people contact a network of sighted volunteers for help with live video chat." />
+        <meta name="og:image" content="../assets/images/header-logo.png" />
+        <meta name="og:locale" content="en_US" />
+        <meta name="og:type" content="website" />
+
+        
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+        <link rel='stylesheet' href='../assets/css/main.css'>
+        <!--[if lt IE 9]>
+        <link rel='stylesheet' href='../assets/css/ie8.css'>
+        <![endif]-->
+
+        <link rel="image_src" href="../assets/images/header-logo.png" />
+        <link href="../favicon.ico" rel="shortcut icon">
+        <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+    </head>
+    <body class="not-ios">
+        <div class="container">
+
+<div class="privacy-container cont">
+	<div class="privacy int">
+		<h2>Privacy Policy</h2>
+
+		<h3>Summary</h3>
+
+		<p>Nothing you type into the keyboard is sent to anyone. The data is only available to you and the app you type it into. For example, typing with the keyboard in a messaging app will send the typed information to the messaging app, but no one else. Your recents and favorites are stored locally on the device, and potentially in iCloud, but not sent to us in any way.</p>
+
+		<h3>Full-access keyboard option</h3>
+
+		<p>When you give a keyboard full access in the settings, it will be able to do more things, such as access the internet. The only reason for asking for full access is to be able to store recents and favorites. None of the other features given access to are used. You can choose to use the keyboard without full access, but then recents and favorites will be in a read-only mode, and will not sync with iCloud.</p>
+
+		<h3>Storing of user data</h3>
+
+		<p>Whenever you type something, it will be stored locally, and, if configured, on Apple’s iCloud servers. Storing recently used can be cleared or disabled from the app settings. After that, the data will be completely removed from both the local device and iCloud. When you favorite something, it is stored locally on the device, and potentially also iCloud. When you remove an item from your favorites, it will be completely removed from both the local device and iCloud. Data saved are not encrypted. You can enter information into the app, but this is only stored for the current session, never persistent onto disk.</p>
+
+		<h3>Sharing of data</h3>
+
+		<p>Your data will never be shared with anybody without your consent. Not the app developer; not any 3rd party service. There’s no analytics information saved, and no registration of usage patterns in neither the app nor the keyboard. Crash reports will automatically be sent to the developer if configured in the system settings. The number of app downloads and in-app purchases is collected by Apple, and shared with the developer. None of these is personally identifiable. Even if an governmental institution requested access to your data, we wouldn’t be able to, since we don’t have it.</p>
+
+		<h3>Access to data</h3>
+
+		<p>This app does not have access to any data from your phone. It does have access to the content of text inputs, when the keyboard is active, but this is used only for functionality in the app, and never stored or analyzed for any other purpose. It does not have access to contents of secure input fields. The app doesn’t use phone features such as GPS, networking, Bluetooth, camera, etc., and access to these is not available without user consent.</p>
+
+		<h3>Children</h3>
+
+		<p>There is no specific information collected about children under the age of 13; we do not even at any point have access to the age of the user of the app.</p>
+
+		<h3>Contacting me</h3>
+
+		<p>You can use the contact developer link in the settings if you have any questions, or things that you would like deeper explained.</p>
+	</div>
+</div>
+
+            <div class="footer-container cont">
+                <div class="footer int">
+                    <div class="asection">
+                        <p>Made with love in<br>Copenhagen by</p>
+                    </div>
+                    <div class="bsection">
+                        <a href="/" title="Be My Eyes">
+                            <img src="../assets/images/bemyeyes.png">
+                        </a>
+                        <img src="../assets/images/and.png" alt="and" class="and">
+                        <a href="http://robo.cat" title="Robocat">
+                            <img src="../assets/images/robocat.png">
+                        </a>
+                        <div class="clearboth"></div>
+                    </div>
+                </div>
+            </div>
+        <script src='../assets/js/jquery.js'></script>
+<script src='../assets/js/retina.js'></script>
+<script src='../assets/js/countUp.js'></script>
+<script src='../assets/js/jquery.transit.js'></script>
+<script src='../assets/js/main.js'></script>
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-54862207-1');ga('send','pageview');
+        </script>
+    </body>
+</html>

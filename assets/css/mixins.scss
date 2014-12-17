@@ -1,0 +1,32 @@
+// Default pixel ratio: 1.3 to support Nexus 7
+// Depending on your target, you may want to set a
+// more suitable minimum pixel ratio here:
+// http://bjango.com/articles/min-device-pixel-ratio/
+$hidpi-min-pixel-ratio: 1.3 !default;
+
+@mixin imaged-button($image, $width, $height, $is_sprite: false, $extension: png, $animated: false) {
+  $image-fullname: '#{$image}.#{$extension}';
+  
+  @include retina-image($image, $width $height, $extension);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: $height;
+  width: $width;
+  color: transparent;
+
+  @if $animated {
+    @include transition (all 0.3s ease-in-out);
+  }
+
+  @if $is_sprite{
+    &:hover {
+      background-position: -$width 0px;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio),
+          (min-resolution: $hidpi-min-pixel-ratio * 96dpi),
+          (min-resolution: $hidpi-min-pixel-ratio * 1dppx) {
+      background-size: $width*2 $height;
+    }
+  }
+}

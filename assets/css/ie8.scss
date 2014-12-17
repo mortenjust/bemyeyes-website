@@ -1,0 +1,18 @@
+.container {
+	.details-container .details {
+		.downloads {
+			.playstore {
+				font-size: 0px;
+			}
+		}
+	}
+
+	.demo-container .demo {
+		.iphone {
+			.fallback {
+				display: block;
+			}
+			
+		}
+	}
+}
