@@ -346,6 +346,12 @@ $menu-height: 70px;
 		.download:hover, .appstore-hover {
 			@include retina-image("appstore-hover", 176px 59px);
 		}
+
+		.android {
+			font-weight: bold;
+			display: inline-block;
+			margin-top: 10px;
+		}
 	}
 
 	.bside {

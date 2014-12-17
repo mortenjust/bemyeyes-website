@@ -761,6 +761,10 @@ p {
         .details .aside .download:hover, .details .aside .appstore-hover {
           background-image: url(../images/appstore-hover@2x.png);
           background-size: 176px 59px; } }
+    .details .aside .android {
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px; }
   .details .bside {
     float: left;
     display: block;
