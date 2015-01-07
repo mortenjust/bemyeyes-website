@@ -148,7 +148,7 @@
       return;
     }
     $this = $(this);
-    $header = $(".menu-container");
+    $header = $(".container");
     if ($this.scrollTop() > 1) {
       $header.addClass("sticky");
     } else {
