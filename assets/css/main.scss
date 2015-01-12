@@ -84,6 +84,10 @@ p {
 
 $menu-height: 70px;
 
+.container.sticky {
+	padding-top: 70px;
+}
+
 .menu-container {
 	background: transparent;
 	height: $menu-height;
@@ -93,7 +97,7 @@ $menu-height: 70px;
 	.white { display: none; }
 	.dark { display: block; }
 
-	&.sticky {
+	.sticky & {
 		background: #fff;
 		opacity: 0.92;
 		position: fixed;

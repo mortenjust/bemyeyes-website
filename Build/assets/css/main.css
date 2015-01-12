@@ -519,6 +519,9 @@ p {
 .cont {
   width: 100%; }
 
+.container.sticky {
+  padding-top: 70px; }
+
 .menu-container {
   background: transparent;
   height: 70px;
@@ -531,14 +534,14 @@ p {
     display: none; }
   .menu-container .dark {
     display: block; }
-  .menu-container.sticky {
+  .sticky .menu-container {
     background: #fff;
     opacity: 0.92;
     position: fixed;
     top: 0; }
-    .menu-container.sticky .white {
+    .sticky .menu-container .white {
       display: block; }
-    .menu-container.sticky .dark {
+    .sticky .menu-container .dark {
       display: none; }
 
 .menu {
