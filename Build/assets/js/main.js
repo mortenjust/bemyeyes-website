@@ -1,5 +1,5 @@
 (function() {
-  var animateFeatures, applyStats, countTotStat, delay, desktopPlayer, getStats, hidePlayer, iPhonePlayer, isSafari, isiOS, isiPad, isiPhone, preparePlayer, showPlayer, startVideo, userAgent, vimeoFinished, vimeoPaused, vimeoReady, _ref, _ref1, _ref2;
+  var animateFeatures, applyStats, countTotStat, delay, desktopPlayer, getStats, hidePlayer, iPhonePlayer, isSafari, isiOS, isiPad, isiPhone, preparePlayer, showPlayer, startVideo, userAgent, vimeoFinished, vimeoReady, _ref, _ref1, _ref2;
 
   getStats = function() {
     var url, xhr;
@@ -95,6 +95,7 @@
 
   hidePlayer = function() {
     $('.menu-container').css('opacity', 1);
+    $('.menu-container').css('pointer-events', 'auto');
     $('.menu').show();
     $(".video-curtain").fadeOut();
     return $(".video-wrapper").fadeOut();
@@ -102,6 +103,7 @@
 
   showPlayer = function() {
     $('.menu-container').css('opacity', 0);
+    $('.menu-container').css('pointer-events', 'none');
     $('.menu').hide();
     $(".video-curtain").fadeIn();
     return $(".video-wrapper").fadeIn();
@@ -124,16 +126,9 @@
     var fp;
     if (!isiOS) {
       fp = Froogaloop(pid);
-      fp.addEvent('pause', vimeoPaused);
       fp.addEvent('finish', vimeoFinished);
       return fp.api('play');
     }
-  };
-
-  vimeoPaused = function(pid) {
-    return delay(100, function() {
-      return hidePlayer();
-    });
   };
 
   vimeoFinished = function(pid) {

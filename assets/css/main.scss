@@ -994,3 +994,13 @@ $menu-height: 70px;
 		}
 	}
 }
+
+@include media(max-width 320px) {
+	.header {
+		.header-text {
+			h2 {
+				font-size: 18pt;
+			}
+		}
+	}
+}

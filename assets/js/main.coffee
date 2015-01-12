@@ -60,12 +60,14 @@ preparePlayer = ->
 
 hidePlayer = ->
 	$('.menu-container').css('opacity', 1)
+	$('.menu-container').css('pointer-events', 'auto')
 	$('.menu').show()
 	$(".video-curtain").fadeOut()
 	$(".video-wrapper").fadeOut()
 
 showPlayer = ->
 	$('.menu-container').css('opacity', 0)
+	$('.menu-container').css('pointer-events', 'none')
 	$('.menu').hide()
 	$(".video-curtain").fadeIn()
 	$(".video-wrapper").fadeIn()
@@ -83,13 +85,13 @@ startVideo = ->
 vimeoReady = (pid) ->
 	if !isiOS
 		fp = Froogaloop(pid)
-		fp.addEvent 'pause', vimeoPaused
+		# fp.addEvent 'pause', vimeoPaused
 		fp.addEvent 'finish', vimeoFinished
 		fp.api 'play'
 
-vimeoPaused = (pid) ->
-	delay 100, ->
-		hidePlayer()
+# vimeoPaused = (pid) ->
+	# delay 100, ->
+	# 	hidePlayer()
 
 vimeoFinished = (pid) ->
 	delay 2000, ->

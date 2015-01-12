@@ -1290,3 +1290,6 @@ p {
   .header .stats {
     position: relative;
     margin: 60px auto 20px auto; } }
+@media screen and (max-width: 320px) {
+  .header .header-text h2 {
+    font-size: 18pt; } }
