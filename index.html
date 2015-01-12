@@ -24,18 +24,17 @@
 
 		<div class="stats">
 				<div class="helpers stat">
-					<span class="value" id="stats_helpers">0</span>
-					<span class="label">Sighted</span>
+					<span class="value" id="stats_helpers" aria-labelledby="stats_helpers_label">0</span>
+					<span class="label" id="stats_helpers_label">Sighted</span>
 				</div>
-				<div class="blind stat">
+				<div class="blind stat" title="0 blind">
 					<span class="value" id="stats_blind">0</span>
 					<span class="label">Blind</span>
 				</div>
-				<div class="helped stat">
+				<div class="helped stat" title="0 helped">
 					<span class="value" id="stats_helped">0</span>
 					<span class="label">Helped</span>
 				</div>
-
 			</div>
 	</div>
 </div>
@@ -156,7 +155,7 @@
 		<div class="row">
 			<div class="block wide nonprofit">
 				<div class="icon">
-					<img src="<!-- @path nonprofit.png -->">
+					<img src="<!-- @path nonprofit.png -->" aria-hidden="true">
 				</div>
 				<h4>Non-profit - all for love</h4>
 				<p>Be My Eyes is a non-profit, put in this world to make<br> the biggest difference possible for blind people. You can donate <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ETA5SH394B3D4" title="">here</a>.</p>
@@ -164,7 +163,7 @@
 
 			<div class="block wide opensource">
 				<div class="icon">
-					<img src="<!-- @path github.png -->">
+					<img src="<!-- @path github.png -->" aria-hidden="true">
 				</div>
 				<h4>Open source - go contribute</h4>
 				<p>Be My Eyes is open source. <br><a href="https://github.com/bemyeyes">See and contribute to the code on GitHub</a>.</p>
